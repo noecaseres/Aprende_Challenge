@@ -1,0 +1,30 @@
+// Breakpoints
+@mixin smMinBreakPoint {
+    @media (min-width: #{$screen-sm}) {
+        @content;
+    }
+}
+
+@mixin mdMinBreakPoint {
+    @media (min-width: #{$screen-md}) {
+        @content;
+    }
+}
+
+@mixin lgMinBreakPoint {
+    @media (min-width: #{$screen-lg}) {
+        @content;
+    }
+}
+
+@mixin highlight ($color){
+    background-color: $color;
+}
+
+
+@mixin dflex ($dir, $just, $align){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}

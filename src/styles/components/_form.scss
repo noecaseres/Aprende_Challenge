@@ -1,0 +1,51 @@
+.form-container{
+    padding: 21px 15px;
+    border-radius: 6px;
+    text-align: center; 
+    p, h1,h2,h3,h4{
+        color: $dark-gray
+    }
+}
+
+.form-container_content{
+    p{
+        margin-top: 6px;
+    }
+}
+
+form{
+    margin: 21px 0 15px;
+    @include dflex(column, space-between, start);
+}
+
+.checkbox-container {
+    display: flex;
+    gap:9px; 
+    p{
+        text-align: left;
+    }
+}
+
+.checkbox {
+    background-color: $primary;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid $dark-gray;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  
+    &.checked {
+      background-color: $pink;
+      border: none;
+
+    }
+  }
+
+  .check-icon {
+    width: 100%;
+    height: 100%;
+    background-image: url('src/assets/icon-check.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
