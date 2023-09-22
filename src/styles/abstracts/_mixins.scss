@@ -21,10 +21,12 @@
     background-color: $color;
 }
 
-
+// Layouts
 @mixin dflex ($dir, $just, $align){
     display: flex;
     flex-direction: $dir;
     justify-content: $just;
     align-items: $align;
 }
+
+

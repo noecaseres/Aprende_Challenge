@@ -4,6 +4,13 @@ html, body{
     color: $primary;
 }
 
+button{
+    border: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 /*Typography*/
 h1 {
     font-style: normal;
@@ -51,13 +58,15 @@ p{
     line-height: 22px;
 }
 
-button{
-    border: none;
-    &:hover{
-        cursor: pointer;
-    }
+.p2{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
 }
 
+
+/*custom classes*/
 .dflex-col{
     display: flex;
     flex-direction: column;
@@ -84,23 +93,46 @@ button{
     background-color: $primary;
 }
 
-
 form{
     input{
+        height: 40px;
         width: 100%;
         padding: 9px 15px;
         border-radius: 6px;
-        border: 1px solid $light-gray;
+        outline: 1px solid $light-black;
+        outline-offset: -1px;
+        border: none;
         margin: 6px 0 15px 0;
-        ::placeholder{
+        &::placeholder{
             font-family: $font-sourse;
             font-size: 16px;    
             font-weight: 400;
             line-height: 22px;
             letter-spacing: 0em;
             text-align: left;
-            color: $light-gray;     
+            color: $light-gray;  
+            }
+            &:focus,
+            &:hover,
+            &:active {
+              border-color: black; /* Cambiamos el color del borde cuando está en foco o el mouse pasa sobre él */
             }
     }
-  
 }
+
+.btn-large{
+    width: 100%;
+    background-color: $pink;
+    color: $primary;
+    padding: 12px 30px 12px 30px;
+    border-radius: 6px;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.h-100{
+    height: 100%;
+}
+

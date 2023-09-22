@@ -1,0 +1,86 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto; 
+        -webkit-overflow-scrolling: touch;
+  }
+
+.carousel {
+        display: flex;
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap; 
+    
+    @include mdMinBreakPoint {
+        overflow: hidden;
+    }
+}
+  
+.carousel-item {
+    margin-right: 10px;
+    max-width: calc(50% - 10px);
+    min-width: 292px;
+    position: relative;
+ 
+    img{
+        width: 100%;
+        min-height: 438px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    @include mdMinBreakPoint {
+        margin-right: 10px;
+        width: calc(25% - 10px);
+    }
+}
+
+.show-more-button_desktop {
+    display: none;
+  
+
+    @include mdMinBreakPoint {
+        display: flex;
+    }
+}
+
+.show-more-button_mobile{
+    display: flex;
+  
+
+    @include mdMinBreakPoint {
+        display: none;
+    }
+}
+
+
+/*overlay*/
+.Overlay{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 438px;
+    background: linear-gradient(180deg, rgba(27, 38, 49, 0) 15.1%, #1B2631 80.73%);
+}
+
+
+.OverlayContent {
+    min-width: 292px;
+    color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    margin-top: 1rem;
+    min-height: 438px;
+    height: 225px;
+}
+
+
+

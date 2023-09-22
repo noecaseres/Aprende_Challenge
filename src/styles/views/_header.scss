@@ -1,7 +1,13 @@
+.header-container{
+    height: 1119px;
+    background-color: $dark-gray;
 
+}
 .logo{
     text-align: center;
     margin: 0 auto;
+    background-color:$primary;
+
 }
 
 .header{
@@ -25,14 +31,19 @@
 }
 
 .header-content {
-    background-color: $dark-gray;
     position: absolute;
     z-index: 1;
     height: 100%;
 }
 
+.header-content_title{
+    margin-bottom: 15px;
+
+}
+
 .bg-pink{
     display: inline-block;
+    padding: 0 6px;
     @include highlight($pink);
 
 }
