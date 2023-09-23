@@ -13,7 +13,7 @@ const Carousel = () => {
     for (let index in productList.results) {
         arrMapped.push(productList.results[index]);
     }
-setProducts(arrMapped);
+    setProducts(arrMapped);
 }
 
 useEffect(() => {
@@ -32,30 +32,36 @@ const handleShowMore = () => {
 
 
 return (
+    <>
+    <div>Filtros por escuela</div>
     <div className="carousel-container">
-    <div className="carousel">
-        {products.slice(0, visibleItems).map((product, index) => (
-        <div key={product.id} className="carousel-item">
-            <img src={product.post_meta.featured_image.mobile.src} alt={`Image ${index}`} className="carousel-item_img"/>
-            <div className="Overlay"></div>
-            <div className="OverlayContent">
-                <h3>{product.post_title}</h3>
-                <div>
-                    <div>estudiantes</div>
-                    <div>rating</div>
+        <div className="carousel">
+            {products.slice(0, visibleItems).map((product, index) => (
+            <div key={product.id} className="carousel-item">
+                <img src={product.post_meta.featured_image.mobile.src} alt={`Image ${index}`} className="carousel-item_img"/>
+                <div className="Overlay"></div>
+                <div className="OverlayContent font-white">
+                    <h3>{product.post_title}</h3>
+                    <div>
+                        <div>estudiantes</div>
+                        <div>rating</div>
+                    </div>
                 </div>
             </div>
+            ))}
+            <div className="show-more-button_mobile_container">
+                <button className="show-more-button_mobile btn-small" onClick={handleShowMore}>
+                    Cargar más
+                </button>
+            </div>
         </div>
-        ))}
-        <button className="show-more-button_mobile" onClick={handleShowMore}>
-            Cargar más
-        </button>
-    </div>
-        <button className="show-more-button_desktop" onClick={handleShowMore}>
+        <button className="show-more-button_desktop btn-small" onClick={handleShowMore}>
             Cargar más
         </button>
 
     </div>
+
+    </>
 );
 };
 

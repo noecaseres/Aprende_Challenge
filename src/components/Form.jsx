@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
+
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
@@ -9,6 +10,7 @@ export const Form = () => {
     const [showSecondStep, setshowSecondStep] = useState(false);
     const [phoneValue, setPhoneValue] = useState("");
     const [areaDeInteres, setAreaDeInteres] = useState("");
+    const [formSent, setFormSent] = useState(false)
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -33,8 +35,14 @@ export const Form = () => {
         areaDeInteres: areaDeInteres,
         checked: isChecked
         };
-    
+        
         console.log("Datos del formulario completo:", fullFormData);
+
+        setFormSent(true)
+        setTimeout(() => {
+            setFormSent(false)
+        }, 2000);
+
     };
     
 
@@ -59,7 +67,7 @@ export const Form = () => {
 
 
 return (
-    <div className="form-container bg-white">
+    <div className="form-container bg-white font-dark">
         <div className="form-container_content">
             <h4>¡Recibe información de precios y becas!</h4>
             <p>Al recibir tu información, uno de nuestros asesores académicos se comunicará contigo</p>
@@ -86,7 +94,7 @@ return (
                 value={formData.email}/>
             <div className="checkbox-container">
                 <input
-                    className="checkbox-input"
+                    className="checkbox-input bg-white"
                     type="checkbox"
                     onChange={handleCheckboxClick}
                     checked={isChecked}
@@ -110,14 +118,21 @@ return (
                 value={formData.areaDeInteres}/>
             <div className="checkbox-container">
                 <input
-                    className="checkbox-input"
+                    className="checkbox-input bg-white"
                     type="checkbox"
                     onChange={handleCheckboxClick}
                     checked={isChecked}
                 />
                 <p>Recibe mensajes vía <FaWhatsapp fill="#25D366"/> WhatsApp y Sms sobre nuestros diplomados.</p>             
             </div>
-            <button className="btn-large">Quiero hablar con un asesor</button>
+
+            {formSent ? 
+                <div className="btn-large form-alert bg-white">
+                    <p>Su mensaje ha sido enviado</p>
+                </div>: 
+                <button className="btn-large">Quiero hablar con un asesor</button>
+
+            }
         </form>
         }
         <p className="p2 align-left">Al hacer clic arriba, nos autoriza a contactarlo/a mediante un sistema automatizado de llamadas al teléfono indicado arriba con el fin de recibir información relevante sobre Aprende Institute, y usted acepta nuestros Términos de servicio y Política de privacidad. Su consentimiento no constituye una condición de compra.</p>

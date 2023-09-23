@@ -1,3 +1,19 @@
 .diplomados-container{
     overflow-x: hidden; 
+    background-color:$gray;
+    padding: 45px 0px;
+
+    @include mdMinBreakPoint {
+        padding: 60px 64px;
+
+    }
 }
+
+.diplomados-content{
+    text-align: center;
+    padding: 0 16px 30px;
+    h2{
+        margin-bottom: 15px;
+    }
+}
+

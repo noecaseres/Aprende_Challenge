@@ -3,8 +3,8 @@
     margin-top: 30px;
     border-radius: 6px;
     text-align: center; 
-    p, h1,h2,h3,h4{
-        color: $dark-gray;
+    @include mdMinBreakPoint {
+        width: 397px;
     }
 }
 
@@ -17,6 +17,11 @@
 form{
     margin: 21px 0 15px;
     @include dflex(column, space-between, start);
+}
+
+.form-alert{
+    color: $pink;
+    transition: all 1s ease-out;
 }
 
 /*Checkbox*/
@@ -37,7 +42,6 @@ form{
     margin: 0;
     -webkit-appearance: none;
     appearance: none;
-    background-color: $primary;
 }
 
 .checkbox-input:checked::after,

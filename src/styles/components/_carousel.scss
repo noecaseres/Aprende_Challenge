@@ -3,7 +3,10 @@
     flex-direction: column;
     align-items: center;
     overflow-x: auto; 
-        -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    @include mdMinBreakPoint {
+        overflow: hidden;
+    }
   }
 
 .carousel {
@@ -22,6 +25,7 @@
     max-width: calc(50% - 10px);
     min-width: 292px;
     position: relative;
+
  
     img{
         width: 100%;
@@ -39,15 +43,26 @@
 
 .show-more-button_desktop {
     display: none;
+    height: fit-content;
   
 
     @include mdMinBreakPoint {
         display: flex;
     }
 }
-
+.show-more-button_mobile_container{
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    max-width: calc(50% - 10px);
+    min-width: 292px;
+}
 .show-more-button_mobile{
     display: flex;
+    height: fit-content;
+    margin: auto 0;
+
+
   
 
     @include mdMinBreakPoint {
@@ -69,7 +84,6 @@
 
 .OverlayContent {
     min-width: 292px;
-    color: $primary;
     display: flex;
     flex-direction: column;
     justify-content: end;

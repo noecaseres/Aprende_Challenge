@@ -11,6 +11,12 @@
     }
 }
 
+@mixin mdMaxBreakPoint {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+}
+
 @mixin lgMinBreakPoint {
     @media (min-width: #{$screen-lg}) {
         @content;
@@ -27,6 +33,14 @@
     flex-direction: $dir;
     justify-content: $just;
     align-items: $align;
+}
+
+@mixin dgrid ($dir, $col, $row, $gap){
+    display: grid;
+    grid-template-columns: $col;
+    grid-template-rows: $row;
+    gap: $gap
+
 }
 
 

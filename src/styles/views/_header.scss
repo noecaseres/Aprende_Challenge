@@ -1,12 +1,16 @@
 .header-container{
     height: 1119px;
-    background-color: $dark-gray;
+
+    @include mdMinBreakPoint {
+        height: 720px;
+    }
 
 }
 .logo{
     text-align: center;
     margin: 0 auto;
     background-color:$primary;
+    padding: 19px 0;
 
 }
 
@@ -15,7 +19,12 @@
     height: 0;
     position: relative;
     padding-top: calc(75%);
-    @include dflex(column, space-between, end)
+    @include dflex(column, space-between, end);
+
+    @include mdMinBreakPoint {
+        padding-top: calc(50%);
+    }
+
 }
 
 .header_bgimg{
@@ -28,12 +37,30 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include mdMinBreakPoint {
+        height: 720px;
+    }
 }
 
 .header-content {
     position: absolute;
     z-index: 1;
     height: 100%;
+
+    @include mdMinBreakPoint {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        bottom: 96px;
+        height: 100%;
+
+    }
+}
+
+.header-content_container{
+    @include mdMinBreakPoint {
+        margin-right: 129px;
+    }
 }
 
 .header-content_title{
