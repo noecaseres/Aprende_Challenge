@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { StarIcon, UsersIcon } from "../assets";
+import { HalfStarIcon, StarIcon, UsersIcon } from "../assets";
 
 const Carousel = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -10,7 +10,7 @@ const Carousel = () => {
     const [filteredList, setFilteredList] = useState([]);
     const [selectedSchool, setSelectedSchool] = useState(""); 
 
-/*Defino breakpoint */
+/*Breakpoint */
 const handleWindowResize = () => {
     setWindowWidth(window.innerWidth);
   };
@@ -36,6 +36,10 @@ const productList = async() => {
     setFilteredList(arrMapped);
 }
 
+const rating = products.product_rating ? products.product_rating : 4.5; // Agregué este condicional ya que la API devuelve null para todos los casos.
+const fullStarCount = Math.floor(rating);
+const hasHalfStar = rating % 1 !== 0; 
+
 useEffect(() => {
     productList()
 }, [])
@@ -59,6 +63,7 @@ const handleShowMore = () => {
         }
     }
 };
+
 
 
 useEffect(() => {
@@ -95,7 +100,6 @@ const handleSchoolFilter = (school) => {
     }
 };
 
-console.log(products)
 
 
 return (
@@ -122,17 +126,33 @@ return (
                     <div className="OverlayContent font-white">
                         <h3>{product.post_title}</h3>
                         <div className="dflex-row just-content-between">
-                            <div>
-                                <div className="card-users-icon">
+                            <div className="dflex-row">
+                                <div >
                                     <img src={UsersIcon} alt="Users"/>
                                 </div>
-                                <p>12353 estudiantes</p>            
+                                {/* El campo estudiantes no existe en la API, por lo cual he harcodeado el valor. */}
+                                <p className="carousel-item-p">12353 estudiantes</p>        
                             </div>
-                            <div>
-                                <div className="card-users-icon">
-                                    <img src={StarIcon} alt="Star"/>
-                                </div>
-                                <p>{product.product_rating ? product.product_rating : "(4.5)"}</p>
+                            <div className="dflex-row">
+                                <div className="dflex-row">
+                                    {Array.from({ length: fullStarCount }, () => (
+                                        <>
+                                            <div >
+                                                <img src={StarIcon} alt="Star"/>
+                                            </div>
+                                        </>
+                                    ))}
+                                    {hasHalfStar &&                          
+                                    <>
+                                        <div >
+                                            <img src={HalfStarIcon} alt="HalfStar"/>
+                                        </div>
+                                    </>}
+                                    {Array.from({ length: 5 - Math.ceil(rating) }, () => (
+                                        <></>
+                                    ))}
+                                </div>                               
+                                <p className="carousel-item-p">{product.product_rating ? product.product_rating : rating}</p>
                             </div>   
                         </div>
                     </div>

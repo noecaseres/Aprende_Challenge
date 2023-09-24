@@ -99,7 +99,7 @@ return (
             </div>
             <button className="btn-large">Continuar</button>
         </form>:
-        <form className="form-secondary" onSubmit={handleSecondSubmit}>
+        <form className={`form-secondary}`} onSubmit={handleSecondSubmit}>
             <PhoneInput
                 placeholder="+54 11 1234 1234" 
                 value={phoneValue}

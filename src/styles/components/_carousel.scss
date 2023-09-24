@@ -31,7 +31,7 @@
         width: calc(25% - 24px);
     }
  
-    img{
+    .carousel-item_img{
         width: 100%;
         min-height: 438px;
         height: auto;
@@ -39,6 +39,11 @@
     }
 
 }
+
+.carousel-item-p{
+    margin-left: 3px ;
+}
+
 
 /*Cards Overlay*/
 .Overlay{
@@ -58,11 +63,6 @@
     right: 0;
     bottom: 0;
     padding: 16px;
-}
-
-.card-users-icon{
-    position: absolute;
-    
 }
 
 

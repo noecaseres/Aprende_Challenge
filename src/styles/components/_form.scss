@@ -73,10 +73,15 @@ form{
 }
 
 /*Second Form*/
-
 .form-secondary{
     margin-top: 51px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
+
+
 .phone-input{
     display: flex; 
     align-items: center;
