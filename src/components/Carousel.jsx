@@ -39,7 +39,6 @@ const productList = async() => {
 useEffect(() => {
     productList()
 }, [])
-console.log(products)
 
 const handleShowMore = () => { 
     if(isMobile){
@@ -89,12 +88,15 @@ const handleSchoolFilter = (school) => {
         const filteredProducts = products.filter(
         (product) => product.post_meta.school_name === school.name
         );
+        setVisibleItems(4)
         setCurrentCard(0)
         setFilteredList(filteredProducts);
         setSelectedSchool(school.name);
     }
 };
+
 console.log(products)
+
 
 return (
     <>
@@ -106,7 +108,7 @@ return (
             onClick={() => handleSchoolFilter(school)}
             className={selectedSchool === school.name ? "btn-schools selected" : "btn-schools"}
             >
-            Escuela de {school.name} ({school.count})
+            <p className="p2">Escuela de {school.name} ({school.count})</p>
             </button>
             ))}
         </div>
@@ -115,18 +117,23 @@ return (
             <div className="carousel">  
                 {filteredList.slice(currentCard, visibleItems).map((product, index) => (
                 <div key={product.id} className="carousel-item">
-                    <img src={product.post_meta.featured_image.mobile.src} alt={`Image ${index}`} className="carousel-item_img"/>
+                    <img src={product.post_meta.featured_image.medium.src} alt={`Image ${index}`} className="carousel-item_img"/>
                     <div className="Overlay"></div>
                     <div className="OverlayContent font-white">
                         <h3>{product.post_title}</h3>
-                        <div>
-                            <div className="card-users-icon">
-                                <img src={UsersIcon}/>
+                        <div className="dflex-row just-content-between">
+                            <div>
+                                <div className="card-users-icon">
+                                    <img src={UsersIcon} alt="Users"/>
+                                </div>
+                                <p>12353 estudiantes</p>            
                             </div>
-                            {product.product_rating ? product.product_rating : 12353} estudiantes                
-                        </div>
-                        <div className="card-users-icon">
-                            <img src={StarIcon}/>
+                            <div>
+                                <div className="card-users-icon">
+                                    <img src={StarIcon} alt="Star"/>
+                                </div>
+                                <p>{product.product_rating ? product.product_rating : "(4.5)"}</p>
+                            </div>   
                         </div>
                     </div>
                 </div>

@@ -115,7 +115,7 @@ return (
                     value={formData.areaDeInteres}
                     className="custom-input"/>
                     <div className="chevron-icon">
-                        <img src={ChevronIcon}/>
+                        <img src={ChevronIcon} alt="chevron"/>
                     </div>
                 </div>
             <div className="checkbox-container">

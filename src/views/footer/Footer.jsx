@@ -6,7 +6,7 @@ export const Footer = () => {
         <div className="footer-grid">
             <div className="footer-layout-items">
                 <p className="p1-semibold">Acerca de Aprende</p>
-                <ul className="footer-grid-item_flex">
+                <ul className="footer-item_flex">
                     <li>Sobre nosotros</li>
                     <li>Empresas</li>
                     <li>Prensa</li>
@@ -15,7 +15,7 @@ export const Footer = () => {
             </div>          
             <div className="footer-layout-items">
                 <p className="p1-semibold">Explorar</p>
-                <ul className="footer-grid-item_flex">
+                <ul className="footer-item_flex">
                     <li>Historias de exito</li>
                     <li>Docentes</li>
                     <li>Blog</li>
@@ -44,21 +44,21 @@ export const Footer = () => {
         </div>
         <div className="footer-media">
             <div className="footer-media_stores cursor-pointer">
-                <img src={AppStore}/>
-                <img src={GooglePlay}/>
+                <img src={AppStore} alt="AppStore"/>
+                <img src={GooglePlay} alt="GooglePlay"/>
             </div>
             <div className="footer-media_redes dflex-row">
                 <div className="dflex-row align-items-center cursor-pointer">
-                    <img src={FacebookIcon}/><p className="p2">Facebook</p>
+                    <img src={FacebookIcon} alt="Facebook"/><p className="p2">Facebook</p>
                 </div>
                 <div className="dflex-row align-items-center cursor-pointer">
-                    <img src={InstagramIcon}/><p className="p2">Instagram</p>
+                    <img src={InstagramIcon} alt="Instagram"/><p className="p2">Instagram</p>
                 </div>
                 <div className="dflex-row align-items-center cursor-pointer">
-                    <img src={LinkedInIcon}/><p className="p2">LinkedIn</p>
+                    <img src={LinkedInIcon} alt="LinkedIn"/><p className="p2">LinkedIn</p>
                 </div>
                 <div className="dflex-row align-items-center cursor-pointer">
-                    <img src={TikTokIcon}/><p className="p2">TikTok</p>
+                    <img src={TikTokIcon} alt="TikTok"/><p className="p2">TikTok</p>
                 </div>
             </div>
             <div className="footer-media_legal">

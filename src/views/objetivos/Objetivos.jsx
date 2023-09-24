@@ -48,7 +48,7 @@ export const Objetivos = () => {
             {objetivosList.map((obj, index)=>(
                 <div key={index} className="objetivos-container">
                     <div className="objetivos_image">
-                        <img src={obj.icon} alt="icon"/>
+                        <img src={obj.icon}  alt={`Icon ${index}`}/>
                     </div>
                     <div className="objetivos_content">
                         <h4>{obj.title}</h4>

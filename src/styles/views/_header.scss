@@ -12,13 +12,12 @@
 .header-content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-
 
     @include mdMinBreakPoint {
         display: flex;
         flex-direction: row;
         padding-top: 0px;
+        gap: 2rem;
     }
 }
 
@@ -26,8 +25,10 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin-top: -36px;
     @include mdMinBreakPoint {
         margin-right: 129px;
+        margin-top: 0;
     }
 }
 
