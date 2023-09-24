@@ -4,6 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { ChevronIcon } from "../assets";
 
 export const Form = () => {
     const [isChecked, setIsChecked] = useState(true);
@@ -11,7 +12,6 @@ export const Form = () => {
     const [phoneValue, setPhoneValue] = useState("");
     const [areaDeInteres, setAreaDeInteres] = useState("");
     const [formSent, setFormSent] = useState(false)
-
     const [formData, setFormData] = useState({
         nombre: "",
         apellido: "",
@@ -34,18 +34,15 @@ export const Form = () => {
         telefono: phoneValue, 
         areaDeInteres: areaDeInteres,
         checked: isChecked
-        };
-        
+        };   
         console.log("Datos del formulario completo:", fullFormData);
-
+        
         setFormSent(true)
         setTimeout(() => {
             setFormSent(false)
         }, 2000);
-
     };
     
-
     useEffect(() => {
         if(!phoneValue ){
             setPhoneValue("+54");
@@ -56,7 +53,6 @@ export const Form = () => {
         setIsChecked(isChecked)
     }, [isChecked])
     
-
     const handleFirstStepChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -110,12 +106,18 @@ return (
                 onChange={(value) => setPhoneValue(value)}
                 className="phone-input"
             />
-            <input
-                type="text"
-                name="areaDeInteres"
-                placeholder="Área de interés"
-                onChange={(value) => setAreaDeInteres(value)}
-                value={formData.areaDeInteres}/>
+            <div className="input-container">
+                <input
+                    type="text"
+                    name="areaDeInteres"
+                    placeholder="Área de interés"
+                    onChange={(value) => setAreaDeInteres(value)}
+                    value={formData.areaDeInteres}
+                    className="custom-input"/>
+                    <div className="chevron-icon">
+                        <img src={ChevronIcon}/>
+                    </div>
+                </div>
             <div className="checkbox-container">
                 <input
                     className="checkbox-input bg-white"
@@ -127,7 +129,7 @@ return (
             </div>
 
             {formSent ? 
-                <div className="btn-large form-alert bg-white">
+                <div className="form-alert">
                     <p>Su mensaje ha sido enviado</p>
                 </div>: 
                 <button className="btn-large">Quiero hablar con un asesor</button>

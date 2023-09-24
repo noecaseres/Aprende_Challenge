@@ -8,6 +8,11 @@ import EduIcon from './icon-history-edu.png';
 import EditIcon from './icon-edit-square.png';
 import PlayIcon from './icon-smart-display.png';
 import GroupsIcon from './icon-groups.png';
+import StarIcon from './icon-star.png';
+import HalfStarIcon from './icon-star-half.png';
+import ChevronIcon from './icon-chevron.svg';
+
+
 
 import GooglePlay from './logo-googleplay.svg';
 import AppStore from './logo-appstore.svg';
@@ -27,6 +32,7 @@ export {
     Logo,
     Hero,
     CheckIcon,
+    ChevronIcon,
     AlarmIcon,
     AgentIcon,
     GroupsIcon,
@@ -39,5 +45,7 @@ export {
     FacebookIcon,
     InstagramIcon,
     LinkedInIcon,
-    TikTokIcon
+    TikTokIcon,
+    StarIcon,
+    HalfStarIcon
 };

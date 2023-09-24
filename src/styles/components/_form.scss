@@ -20,8 +20,10 @@ form{
 }
 
 .form-alert{
-    color: $pink;
-    transition: all 1s ease-out;
+    padding: 12px 30px 12px 30px;
+    p{
+        color: $pink;
+    }
 }
 
 /*Checkbox*/
@@ -111,3 +113,23 @@ form{
         color: #2E4053;
     }
 }
+
+.input-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-input {
+    padding-right: 30px;
+    width: 100%;
+  }
+  
+  .chevron-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  

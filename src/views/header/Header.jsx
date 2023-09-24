@@ -1,14 +1,8 @@
-import { Logo } from "../../assets"
 import { Form } from "../../components/Form"
 
 export const Header = () => {
   return (
     <div className="header-container bg-black">
-      <div className="logo">
-        <img src={Logo} alt="Logo"/>
-      </div>
-      <div className="header">
-          <div className="header_bgimg"></div>
           <div className="header-content px-global">
             <div className="header-content_container">
               <div className="header-content_title">
@@ -20,6 +14,5 @@ export const Header = () => {
             <Form/>
         </div>
       </div>
-    </div>
   )
 }

@@ -1,7 +1,7 @@
 .carousel-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     overflow-x: auto; 
     -webkit-overflow-scrolling: touch;
     @include mdMinBreakPoint {
@@ -11,90 +11,134 @@
 
 .carousel {
         display: flex;
+        gap: 24px;
         overflow-x: auto; 
         -webkit-overflow-scrolling: touch;
-        white-space: nowrap; 
     
-    @include mdMinBreakPoint {
+    @include mdMinBreakPoint { 
         overflow: hidden;
     }
 }
-  
+
 .carousel-item {
-    margin-right: 10px;
-    max-width: calc(50% - 10px);
     min-width: 292px;
     position: relative;
+    height: 438px;
+    overflow: hidden;
+    border-radius: 6px;
 
+    @include mdMinBreakPoint { 
+        width: calc(25% - 24px);
+    }
  
     img{
         width: 100%;
         min-height: 438px;
         height: auto;
         object-fit: cover;
-        border-radius: 6px;
     }
 
-    @include mdMinBreakPoint {
-        margin-right: 10px;
-        width: calc(25% - 10px);
-    }
 }
 
-.show-more-button_desktop {
-    display: none;
-    height: fit-content;
-  
+/*Cards Overlay*/
+.Overlay{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(27, 38, 49, 0) 15.1%, #1B2631 80.73%);
+}
 
+
+.OverlayContent {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+}
+
+.card-users-icon{
+    position: absolute;
+    
+}
+
+
+/*Buttons*/
+.show-more-button_desktop_container{
+    display: none;
+    
     @include mdMinBreakPoint {
         display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 16px;
     }
+
 }
+.show-more-button_desktop {
+    height: fit-content;
+}
+
 .show-more-button_mobile_container{
     display: flex;
     justify-content: center;
     margin-right: 10px;
-    max-width: calc(50% - 10px);
     min-width: 292px;
-}
-.show-more-button_mobile{
-    display: flex;
-    height: fit-content;
-    margin: auto 0;
-
-
-  
 
     @include mdMinBreakPoint {
         display: none;
     }
 }
 
-
-/*overlay*/
-.Overlay{
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 438px;
-    background: linear-gradient(180deg, rgba(27, 38, 49, 0) 15.1%, #1B2631 80.73%);
-}
-
-
-.OverlayContent {
-    min-width: 292px;
+.show-more-button_mobile{
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    bottom: 0;
-    margin-top: 1rem;
-    min-height: 438px;
-    height: 225px;
+    height: fit-content;
+    margin: auto 0;  
 }
+
+
+
+/*School Button*/
+.btn-schools-slider{
+    width: 100%;
+    margin-bottom: 30px;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    @include mdMinBreakPoint {
+        overflow: hidden;
+    }
+}
+
+.btn-schools-container{
+    width: 100%;
+    display: flex; 
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow-x: auto;
+    @include mdMinBreakPoint { 
+        overflow: hidden;
+    }
+}
+
+.btn-schools{
+    min-width: fit-content;
+    padding: 6px 12px;
+    border-radius: 24px;
+    background-color: $gray;
+    margin-right: 6px;
+}
+.selected{
+    color: $primary;
+    background-color: $dark-blue;
+
+}
+
+
+
 
 
 

@@ -43,21 +43,21 @@ export const Footer = () => {
             </div>
         </div>
         <div className="footer-media">
-            <div className="footer-media_stores">
+            <div className="footer-media_stores cursor-pointer">
                 <img src={AppStore}/>
                 <img src={GooglePlay}/>
             </div>
             <div className="footer-media_redes dflex-row">
-                <div className="dflex-row align-items-center">
+                <div className="dflex-row align-items-center cursor-pointer">
                     <img src={FacebookIcon}/><p className="p2">Facebook</p>
                 </div>
-                <div className="dflex-row align-items-center">
+                <div className="dflex-row align-items-center cursor-pointer">
                     <img src={InstagramIcon}/><p className="p2">Instagram</p>
                 </div>
-                <div className="dflex-row align-items-center">
+                <div className="dflex-row align-items-center cursor-pointer">
                     <img src={LinkedInIcon}/><p className="p2">LinkedIn</p>
                 </div>
-                <div className="dflex-row align-items-center">
+                <div className="dflex-row align-items-center cursor-pointer">
                     <img src={TikTokIcon}/><p className="p2">TikTok</p>
                 </div>
             </div>
