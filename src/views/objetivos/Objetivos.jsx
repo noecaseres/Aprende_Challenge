@@ -46,7 +46,7 @@ export const Objetivos = () => {
         <h2>Alcanza tus objetivos en un mercado en crecimiento</h2>
         <div className="objetivos-grid">
             {objetivosList.map((obj, index)=>(
-                <div key={index} className="objetivos-container">
+                <div key={index} className="objetivos-container dflex-row">
                     <div className="objetivos_image">
                         <img src={obj.icon}  alt={`Icon ${index}`}/>
                     </div>

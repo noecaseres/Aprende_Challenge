@@ -99,10 +99,21 @@ li{
 .just-content-between{
     justify-content: space-between;
 }
+
+.just-content-center{
+    justify-content: center;
+}
+
+.just-content-end{
+    justify-content: end;
+}
 .align-items-center{
     align-items: center;
 }
 
+.align-items-start{
+    align-items: start;
+}
 .no-wrap{
     flex-wrap: nowrap;
 }
@@ -157,7 +168,7 @@ form{
             &:focus,
             &:hover,
             &:active {
-              border-color: black; /* Cambiamos el color del borde cuando está en foco o el mouse pasa sobre él */
+                border-color: $dark-gray;
             }
     }
 }
@@ -180,6 +191,9 @@ form{
 
 .align-left{
     text-align: left;
+}
+.align-center{
+    text-align: center;
 }
 
 .h-100{

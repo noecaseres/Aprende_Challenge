@@ -105,7 +105,7 @@ const handleSchoolFilter = (school) => {
 return (
     <>
     <div className="btn-schools-slider">
-        <div className="btn-schools-container">
+        <div className="btn-schools-container dflex-row just-content-between">
             {uniqueSchools.map((school, index) => (
             <button
             key={index}
@@ -117,8 +117,8 @@ return (
             ))}
         </div>
     </div>
-    <div className="carousel-container">
-            <div className="carousel">  
+    <div className="carousel-container dflex-col align-items-start">
+            <div className="carousel dflex-row">  
                 {filteredList.slice(currentCard, visibleItems).map((product, index) => (
                 <div key={product.id} className="carousel-item">
                     <img src={product.post_meta.featured_image.medium.src} alt={`Image ${index}`} className="carousel-item_img"/>
@@ -159,7 +159,7 @@ return (
                 </div>
                 ))}
                 <div className="show-more-button_mobile_container">
-                    <button className="show-more-button_mobile btn-small" onClick={handleShowMore}>
+                    <button className="show-more-button_mobile dflex-row btn-small" onClick={handleShowMore}>
                         Cargar más
                     </button>
                 </div>

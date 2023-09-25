@@ -2,9 +2,10 @@
     padding: 21px 15px;
     margin-top: 30px;
     border-radius: 6px;
-    text-align: center; 
     @include mdMinBreakPoint {
         width: 397px;
+        margin-top: 0px;
+
     }
 }
 

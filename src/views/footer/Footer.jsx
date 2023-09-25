@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <div className="footer bg-black font-white">
         <div className="footer-grid">
-            <div className="footer-layout-items">
+            <div className="footer-layout-items dflex-col">
                 <p className="p1-semibold">Acerca de Aprende</p>
                 <ul className="footer-item_flex">
                     <li>Sobre nosotros</li>
@@ -43,7 +43,7 @@ export const Footer = () => {
             </div>
         </div>
         <div className="footer-media">
-            <div className="footer-media_stores cursor-pointer">
+            <div className="footer-media_stores cursor-pointer dflex-row">
                 <img src={AppStore} alt="AppStore"/>
                 <img src={GooglePlay} alt="GooglePlay"/>
             </div>

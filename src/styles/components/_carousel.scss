@@ -1,7 +1,4 @@
 .carousel-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
     overflow-x: auto; 
     -webkit-overflow-scrolling: touch;
     @include mdMinBreakPoint {
@@ -10,13 +7,15 @@
   }
 
 .carousel {
-        display: flex;
+        padding-left:16px ;
         gap: 24px;
         overflow-x: auto; 
         -webkit-overflow-scrolling: touch;
     
     @include mdMinBreakPoint { 
         overflow: hidden;
+        padding-left:0 ;
+
     }
 }
 
@@ -94,7 +93,6 @@
 }
 
 .show-more-button_mobile{
-    display: flex;
     height: fit-content;
     margin: auto 0;  
 }
@@ -115,8 +113,6 @@
 
 .btn-schools-container{
     width: 100%;
-    display: flex; 
-    justify-content: space-between;
     white-space: nowrap;
     overflow-x: auto;
     @include mdMinBreakPoint { 

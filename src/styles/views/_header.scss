@@ -5,7 +5,9 @@
     background-position: top;
     padding: 236px 0 30px ;
         @include mdMinBreakPoint {
-            padding: 96px 64px ;
+            background-size: cover;
+            padding: 91px 64px;
+
         }
 }
 
@@ -22,9 +24,6 @@
 }
 
 .header-content_container{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     margin-top: -36px;
     @include mdMinBreakPoint {
         margin-right: 129px;

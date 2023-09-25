@@ -13,8 +13,6 @@
 }
 
 .footer-layout-items{
-    display: flex;
-    flex-direction: column;
     gap: 12px;
     ul{  
         li{
@@ -58,7 +56,6 @@
 }
 
 .footer-media_stores{
-    display: flex;
     gap: 30px;
     @include mdMinBreakPoint {
         gap: 21px;

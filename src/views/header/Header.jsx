@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <div className="header-container bg-black">
       <div className="header-content px-global">
-            <div className="header-content_container">
+            <div className="header-content_container dflex-col just-content-end">
               <div className="header-content_title">
                 <h1>Diplomado en</h1>
                 <h1 className="bg-pink">Repostería profesional</h1>

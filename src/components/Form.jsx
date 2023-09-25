@@ -38,9 +38,6 @@ export const Form = () => {
         console.log("Datos del formulario completo:", fullFormData);
         
         setFormSent(true)
-        setTimeout(() => {
-            setFormSent(false)
-        }, 2000);
     };
     
     useEffect(() => {
@@ -63,7 +60,7 @@ export const Form = () => {
 
 
 return (
-    <div className="form-container bg-white font-dark">
+    <div className="form-container bg-white font-dark align-center">
         <div className="form-container_content">
             <h4>¡Recibe información de precios y becas!</h4>
             <p>Al recibir tu información, uno de nuestros asesores académicos se comunicará contigo</p>
