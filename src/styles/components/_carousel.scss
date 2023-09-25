@@ -115,8 +115,11 @@
     width: 100%;
     white-space: nowrap;
     overflow-x: auto;
+    padding-left: 16px;
     @include mdMinBreakPoint { 
         overflow: hidden;
+        padding-left: 0;
+
     }
 }
 
