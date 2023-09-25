@@ -7,7 +7,7 @@ Este proyecto es una landing page desarrollada utilizando ReactJS y estilos CSS 
 - Diseño web completamente responsivo.
 - Mobile First.
 - Formulario de dos pasos para la recopilación de datos personales.
-- Carousel de tarjetas con scroll horizontal disponible en mobile y desktop screens.
+- Carousel de tarjetas con scroll horizontal y filtros disponibles en mobile y desktop screens.
 - Uso de componentes de ReactJS para la estructura y funcionalidad del formulario.
 - Integración de estilos CSS utilizando SASS para una apariencia personalizada.
 
@@ -19,17 +19,17 @@ SASS
 
 ###Instrucciones de Ejecución:
 
-1. Asegúrate de tener Node.js y npm instalados en tu sistema.
+1. Asegúrate de tener Node.js y npm instalados.
 
 2. Clona este repositorio en tu máquina local.
 
 3. Navega hasta la carpeta raíz del proyecto en tu terminal.
 
 4. Ejecuta el siguiente comando para instalar las dependencias del proyecto: npm install.
-5. Luego, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo: npm start.
-6. La aplicación estará disponible en tu navegador en la dirección http://localhost:3000.
+5. Luego, ejecuta el siguiente comando para iniciar la aplicación en modo de desarrollo: npm run dev.
+6. La aplicación estará disponible en tu navegador.
 
-Para ejecutar la aplicación en tu entorno local, asegúrate de seguir los pasos de instalación mencionados anteriormente. Una vez que la aplicación esté en funcionamiento, podrás interactuar con ella en tu navegador. Además, si deseas utilizar la funcionalidad de iconos en el campo de número de teléfono, instala la librería react-phone-number-input mediante el siguiente comando:
+Una vez que la aplicación esté en funcionamiento, podrás interactuar con ella en tu navegador. Además, si deseas utilizar la funcionalidad de iconos en el campo de número de teléfono, instala la librería react-phone-number-input mediante el siguiente comando:
 
 - npm install react-phone-number-input
 
