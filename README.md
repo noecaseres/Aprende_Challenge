@@ -2,7 +2,7 @@
 
 Este proyecto es una landing page desarrollada utilizando ReactJS y estilos CSS con SASS. La página se ha diseñado para ser completamente responsive y ofrece un formulario de dos pasos para recopilar datos personales de los usuarios.
 
-###Funcionalidades Destacadas:
+Funcionalidades Destacadas:
 
 - Diseño web completamente responsivo.
 - Mobile First.
@@ -17,7 +17,7 @@ JavaScript
 CSS
 SASS
 
-###Instrucciones de Ejecución:
+Instrucciones de Ejecución:
 
 1. Asegúrate de tener Node.js y npm instalados.
 
@@ -33,8 +33,8 @@ Una vez que la aplicación esté en funcionamiento, podrás interactuar con ella
 
 - npm install react-phone-number-input
 
-####Demo URL:
+Demo URL:
 https://www.loom.com/share/d25d893c16c94ffd83e648bf8d6c4d6b?sid=8ee33678-c427-4327-b6d4-c9d7095ed75a
 
-####Autor:
+Autor:
 Noelia Cáseres - Frontend Developer.
