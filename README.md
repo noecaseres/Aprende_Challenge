@@ -11,7 +11,7 @@ Funcionalidades Destacadas:
 - Uso de componentes de ReactJS para la estructura y funcionalidad del formulario.
 - Integración de estilos CSS utilizando SASS para una apariencia personalizada.
 
-### Tecnologías Utilizadas:
+Tecnologías Utilizadas:
 React.js
 JavaScript
 CSS
